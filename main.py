@@ -6,15 +6,16 @@ from infra.database import Base, engine
 from services import openweather_service, auth_service
 from dotenv import load_dotenv
 
-api = fastapi.FastAPI()
+app = fastapi.FastAPI()
+
 
 def configure():
     load_dotenv()
     configure_apikeys()
     configure_jwt()
 
-    api.include_router(weather_api.router)
-    api.include_router(auth.router)
+    app.include_router(weather_api.router)
+    app.include_router(auth.router)
 
     Base.metadata.create_all(bind=engine)
 
@@ -32,9 +33,13 @@ def configure_jwt():
         raise Exception("JWT_SECRET is not set. Please configure it in the environment.")
     auth_service.JWT_SECRET = jwt_key
 
+@app.get("/")
+async def home():
+    return {"message": "hello world"}
+
 
 if __name__ == "__main__":
     configure()
-    uvicorn.run(api, port=8000, host="0.0.0.0", reload=True)
+    uvicorn.run(app, port=8000, host="0.0.0.0")
 else:
     configure()
