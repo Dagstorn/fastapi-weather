@@ -55,7 +55,7 @@ https://weather-rest-api.vercel.app/docs#/auth/login_api_v1_auth_login_post
 1. Клонируйте репозиторий:
    ```bash
    git clone https://github.com/Dagstorn/fastapi-weather
-   cd weather-rest-api
+   cd fastapi-weather
    ```
 
 2. Создайте виртуальное окружение и активируйте его:
@@ -69,12 +69,14 @@ https://weather-rest-api.vercel.app/docs#/auth/login_api_v1_auth_login_post
    pip3 install -r requirements.txt
    ```
 
-4. Настройте базу данных:
-   - Укажите строку подключения к базе данных в `infra/database.py`.
+4. Настройте ключи:
+   - Создайте .env в корне и добавьте туда:
+     - API_KEY: api ключ от OpenWeatherAPI
+     - JWT_SECRET: ключ для JWT
 
 5. Запустите приложение:
    ```bash
-   uvicorn main:api --reload
+   uvicorn main:app --reload
    ```
 
 ## Endpoints
