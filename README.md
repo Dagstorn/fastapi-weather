@@ -2,6 +2,8 @@
 
 deployed on Vercel: https://weather-rest-api.vercel.app/
 
+docs: https://weather-rest-api.vercel.app/docs
+
 пример внещнего API: https://weather-rest-api.vercel.app/api/v1/weather/?city=Portland&country=US
 
 пример все репорты из БД: https://weather-rest-api.vercel.app/api/v1/weather/reports/
