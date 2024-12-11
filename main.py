@@ -35,6 +35,6 @@ def configure_jwt():
 
 if __name__ == "__main__":
     configure()
-    uvicorn.run(api, port=8000, host="127.0.0.1")
+    uvicorn.run(api, port=8000, host="0.0.0.0", reload=True)
 else:
     configure()

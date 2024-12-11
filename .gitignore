@@ -53,3 +53,4 @@ Thumbs.db
 
 # FastAPI generated schemas
 schema.json
+.vercel
