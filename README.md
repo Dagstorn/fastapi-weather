@@ -1,8 +1,8 @@
 # FastAPI Тестовое задание
 
-deployed on Vercel: https://weather-rest-bwubblaeg-abylkassimovalishergmailcoms-projects.vercel.app/
+deployed on Vercel: https://weather-rest-api.vercel.app/
 
-пример внещнего API: https://weather-rest-bwubblaeg-abylkassimovalishergmailcoms-projects.vercel.app/api/v1/weather/?city=Portland&country=US
+пример внещнего API: https://weather-rest-api.vercel.app/api/v1/weather/?city=Portland&country=US
 
 ## Features
 - Получение текущих данных о погоде из внешнего погодного сервиса OpenWeatherMap API
