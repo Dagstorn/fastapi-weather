@@ -9,3 +9,4 @@ passlib[bcrypt]~=1.7.4
 starlette~=0.41.3
 bcrypt
 python-multipart
+psycopg2-binary

@@ -10,10 +10,17 @@ services:
       - .:/app
     environment:
       - DATABASE_URL=postgresql://postgres:mypass@db:5432/weatherdb
+      - POSTGRES_HOST=db
+      - POSTGRES_PORT=5432
+      - POSTGRES_DB=weatherdb
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=mypass
     networks:
       - app-network
     depends_on:
       - db
+    command: [ "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000" ]
+
 
   db:
     image: postgres:13
