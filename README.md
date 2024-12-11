@@ -52,33 +52,47 @@ https://weather-rest-api.vercel.app/docs#/auth/login_api_v1_auth_login_post
 
 
 ## Installation
+### без Docker
 1. Клонируйте репозиторий:
    ```bash
    git clone https://github.com/Dagstorn/fastapi-weather
    cd fastapi-weather
    ```
+2. Настройте ключи:
+   - Создайте .env в корне и добавьте туда:
+     - API_KEY: api ключ от OpenWeatherAPI
+     - JWT_SECRET: ключ для JWT
 
-2. Создайте виртуальное окружение и активируйте его:
+3. Создайте виртуальное окружение и активируйте его:
    ```bash
    python3 -m venv venv
    source venv/bin/activate
    ```
 
-3. Установите зависимости:
+4. Установите зависимости:
    ```bash
    pip3 install -r requirements.txt
    ```
-
-4. Настройте ключи:
-   - Создайте .env в корне и добавьте туда:
-     - API_KEY: api ключ от OpenWeatherAPI
-     - JWT_SECRET: ключ для JWT
 
 5. Запустите приложение:
    ```bash
    uvicorn main:app --reload
    ```
 
+### c Docker и Docker-compose
+1. Клонируйте репозиторий:
+   ```bash
+   git clone https://github.com/Dagstorn/fastapi-weather
+   cd fastapi-weather
+   ```
+2. Настройте ключи:
+   - Создайте .env в корне и добавьте туда:
+     - API_KEY: api ключ от OpenWeatherAPI
+     - JWT_SECRET: ключ для JWT
+3. Запустите с Docker compose
+    ```bash 
+   docker-compose up
+   ```
 ## Endpoints
 
 ### Base URL
