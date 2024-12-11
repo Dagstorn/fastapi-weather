@@ -6,7 +6,12 @@ docs: https://weather-rest-api.vercel.app/docs
 
 пример внещнего API: https://weather-rest-api.vercel.app/api/v1/weather/?city=Portland&country=US
 
-пример все репорты из БД: https://weather-rest-api.vercel.app/api/v1/weather/reports/
+пример - все репорты из БД: https://weather-rest-api.vercel.app/api/v1/weather/reports/
+
+пример - логин: Можно использовать username=ali, password=123
+https://weather-rest-api.vercel.app/docs#/auth/login_api_v1_auth_login_post
+
+бд не работает на запись на Vercel
 
 ## Features
 - Получение текущих данных о погоде из внешнего погодного сервиса OpenWeatherMap API
